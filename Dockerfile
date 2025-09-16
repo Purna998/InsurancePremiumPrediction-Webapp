@@ -2,11 +2,11 @@ FROM python:3.11-slim-buster
 
 WORKDIR /app
 
-# copy everything from current directory to /app in the container
-COPY . .       
+COPY requirements.txt requirements.txt
 
-# install dependencies
 RUN pip3 install -r requirements.txt
+
+COPY . .
 
 EXPOSE 8000
 

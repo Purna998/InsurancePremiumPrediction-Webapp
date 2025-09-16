@@ -1,4 +1,4 @@
-Django
+Django>=5
 scikit-learn
 pandas
 numpy
