@@ -72,6 +72,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "insurance.wsgi.application"
 
+ALLOWED_HOSTS = [
+    'https://insurancepremiumprediction-webapp-5.onrender.com',
+    'https://insurancepremiumprediction-webapp-6.onrender.com',
+    '*.onrender.com',
+    '.onrender.com',
+    'render.com',
+]
+
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
