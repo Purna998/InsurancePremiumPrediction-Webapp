@@ -7,3 +7,5 @@ seaborn
 joblib
 psycopg2-binary
 dj_database_url
+gunicorn>=21.2
+whitenoise>=6.7 
