@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -75,16 +76,25 @@ WSGI_APPLICATION = "insurance.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#      'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'insuranceml',         # Replace with your PostgreSQL database name
+#         'USER': 'postgres',         # Replace with your PostgreSQL username
+#         'PASSWORD': 'root', # Replace with your PostgreSQL password
+#         'HOST': 'db',            # Or your DB host
+#         'PORT': '5432',   
+#     }
+# }
+
+import dj_database_url
+
 DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'insuranceml',         # Replace with your PostgreSQL database name
-        'USER': 'postgres',         # Replace with your PostgreSQL username
-        'PASSWORD': 'root', # Replace with your PostgreSQL password
-        'HOST': 'localhost',            # Or your DB host
-        'PORT': '5432',   
-    }
+    "default": dj_database_url.config(
+        default="postgresql://neondb_owner:npg_IbnHSrdEJj96@ep-winter-bread-ad3in8na-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+    )
 }
+
 
 
 # Password validation
