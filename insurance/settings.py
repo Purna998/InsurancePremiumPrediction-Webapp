@@ -77,7 +77,9 @@ ALLOWED_HOSTS = [
     'https://insurancepremiumprediction-webapp-6.onrender.com',
     '*.onrender.com',
     '.onrender.com',
-    'render.com',
+    '.render.com',
+    '127.0.0.1',
+    '*',
 ]
 
 
