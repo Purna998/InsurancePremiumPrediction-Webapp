@@ -6,3 +6,4 @@ matplotlib
 seaborn
 joblib
 psycopg2-binary
+dj_database_url
